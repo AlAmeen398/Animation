@@ -137,6 +137,7 @@ body{
     align-items: center;
     height: 200px;
     width: 200px;
+    margin-left: 10%;
     animation: spin ease-in-out infinite alternate 5s;
 
 }

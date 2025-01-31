@@ -185,8 +185,7 @@ nav a:nth-child(5):hover~span {
   background-color: aqua;
   height: 200px;
   width: 200px;
-  border: 6px solid rgb(0, 64, 255);
-  box-shadow: 12px 12px 12px rgb(22, 73, 202);
+  box-shadow: 12px 12px 12px rgb(133, 112, 75);
   animation: 7s loading1 ease-in-out infinite alternate;
   margin-left: 10%;
 

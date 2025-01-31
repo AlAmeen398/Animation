@@ -10,6 +10,11 @@
   flex-direction: row;
   width: 100%;
   justify-content: space-between;
+ 
+
+}
+body{
+  background-image: url("./images/pexels-pixabay-355465.jpg");
 }
 
 .gallery {
@@ -92,9 +97,7 @@ nav a:nth-child(5):hover~span {
   width: 120px;
 }
 
-body {
-  background-color: black;
-}
+
 
 .box_sq_ro_sq_ro {
   display: flex;
@@ -120,7 +123,6 @@ body {
   display: flex;
   justify-content: space-evenly;
   margin: 30px;
-  background-color: #333;
   padding: 20px;
   border-radius: 8px;
 
@@ -138,7 +140,6 @@ body {
 
 .box_heading_name {
   color: #fff;
-  background-color: #444;
   margin: 10% 10% 10% 10%;
   padding: auto;
   border-radius: 8px;
@@ -508,69 +509,39 @@ body {
   }
 }
 
-.book {
-  position: relative;
-  width: 300px;
-  height: 400px;
-  perspective: 1500px;
-  margin-left: 50%;
+.imagecontainer {
+  display: flex;
+  gap: 20px;
 }
-
-.cover,
-.page {
-  position: absolute;
-  width: 100%;
-  height: 100%;
-  background-color: white;
-  border: 2px solid #ccc;
-  border-radius: 5px;
-  box-shadow: 0 4px 8px rgba(0, 0, 0, 0.2);
-  transform-origin: left center;
-  transform-style: preserve-3d;
-}
-
-
-.cover {
-  background-color: #2c3e50;
-  color: white;
+.card {
+  width: 150px;
+  height: 200px;
+  background: white;
+  border: 1px solid #ccc;
+  box-shadow: 2px 2px 10px rgba(0, 0, 0, 0.2);
   display: flex;
   justify-content: center;
   align-items: center;
   font-size: 20px;
-  z-index: 10;
+  font-weight: bold;
+  position: relative;
+  animation: infinite alternate 6s;
+  animation-fill-mode: forwards;
 }
-
-
-.page {
-  background-size: cover;
-  background-position: center;
-  animation: flip 5s infinite ease-in-out;
+.card:nth-child(odd) {
+  animation-name: moveLeft;
 }
-
-.page:nth-child(1) {
-  background-image: url('./images/pexels-blogrosse-595833697-29749069.jpg');
-  z-index: 9;
-  animation-delay: 2s;
+.card:nth-child(even) {
+  animation-name: moveRight;
 }
-
-.page:nth-child(2) {
-  background-image: url('./images/pexels-ellie-burgin-1661546-29973390.jpg');
-  z-index: 8;
-  animation-delay: 4s;
+@keyframes moveLeft {
+  from { transform: translateX(-100vw); }
+  to { transform: translateX(0); }
 }
-
-.page:nth-child(3) {
-  background-image: url('./images/pexels-hermine-sol-moona-1514472088-29436722.jpg');
-  z-index: 7;
-  animation-delay: 1.3s;
+@keyframes moveRight {
+  from { transform: translateX(100vw); }
+  to { transform: translateX(10); }
 }
-
-.page:nth-child(4) {
-  background-image: url('./images/pexels-nui-malama-169330637-29946193.jpg');
-  z-index: 6;
-  animation-delay: 1s;
-}
-
 
 @keyframes flip {
   0% {
